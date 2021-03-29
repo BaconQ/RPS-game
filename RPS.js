@@ -1,7 +1,8 @@
+let rps = ["rock", "paper", "scissor"]
+let player = prompt("Enter Rock, paper, or scissor!!: ");
+let computer = rps[Math.floor(Math.random() * rps.length)];
+let playerWin;
 
-let player;
-let computer;
-let playerWin = false;
 
 function playRound(player, computer){
 
@@ -11,52 +12,52 @@ function playRound(player, computer){
     }
 
     else if (player == "rock" && computer == "scissor"){
-        console.log("Player chose: " + player);
-        console.log("Computer chose: " + computer);
-        console.log("You win. " + player + " beats " + computer );
         return playerWin = true;
 
     }
 
     else if (player == "rock" && computer == "paper"){
-        console.log("Player chose: " + player);
-        console.log("Computer chose: " + computer);
-        console.log("You lose. " + computer + " beats " + player);
         return playerWin = false;
 
 
     }
     else if (player == "paper" && computer == "scissor"){
-        console.log("Player chose: " + player);
-        console.log("Computer chose: " + computer);
-        console.log("You lose. " + computer + " beats " + player );
         return playerWin = false;
 
 
     }
     else if (player == "paper" && computer == "rock"){
-        console.log("Player chose: " + player);
-        console.log("Computer chose: " + computer);
-        console.log("You win. " + player + " beats " + computer );
         return playerWin = true;
 
     
     }
     else if (player == "scissor" && computer == "rock"){
-        console.log("Player chose: " + player);
-        console.log("Computer chose: " + computer);
-        console.log("You lose. " + computer + " beats " + player );
         return playerWin = false;
 
 
     }
     else if (player == "scissor" && computer == "paper"){
-        console.log("Player chose: " + player);
-        console.log("Computer chose: " + computer);
-        console.log("You win. " + player + " beats " + computer );
         return playerWin = true;
 
 
     
 }
 }
+let game = playRound(player, computer);
+
+if(game == true){
+    console.log("Player chose: " + player);
+    console.log("Computer chose: " + computer);
+    console.log("You win. " + player + " beats " + computer );
+
+}
+
+else {
+    console.log("Player chose: " + player);
+    console.log("Computer chose: " + computer);
+    console.log("You lose. " + computer + " beats " + player );
+    
+
+}
+
+
